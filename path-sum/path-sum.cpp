@@ -23,9 +23,9 @@ public:
         else
         {
             solve(root->left, targetSum, arr, ok);
+            arr.pop_back();
             solve(root->right, targetSum, arr, ok);
         }
-        arr.pop_back();
     }
     
     bool hasPathSum(TreeNode* root, int targetSum) {
